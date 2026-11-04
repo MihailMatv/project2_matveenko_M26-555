@@ -132,7 +132,7 @@ def run():
     welcome()
     while True:
         try:
-            user_input = prompt.string("Введите команду: ", empty=True)
+            user_input = prompt.string("Введите команду: ", empty=True) or ""
         except (EOFError, KeyboardInterrupt):
             print()
             break
