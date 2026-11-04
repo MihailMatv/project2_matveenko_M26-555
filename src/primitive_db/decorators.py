@@ -41,7 +41,7 @@ def confirm_action(action_name):
             """Выполняет действие только после ответа y."""
             question = f'Вы уверены, что хотите выполнить "{action_name}"? [y/n]: '
             try:
-                answer = prompt.string(question, empty=True)
+                answer = prompt.string(question, empty=True) or ""
             except (EOFError, KeyboardInterrupt):
                 print()
                 answer = ""
